@@ -9,3 +9,15 @@ export const voteButtonHandler = (e) => {
     }
 
 }
+
+
+export const submitCommentHandler = (e) => {
+    const commentSection = document.querySelector("#comments > ul")
+    const value = document.querySelector("#comment").value
+    if(value){
+        const comment = document.createElement("li")
+        comment.innerText = value
+        commentSection.appendChild(comment)
+    }
+}
+
